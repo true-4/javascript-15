@@ -8,3 +8,9 @@
 .item {
   max-height: 100px;
 }
+
+.footer-box {
+  padding: 50px;
+  font-size: x-large;
+  text-align: center;
+}

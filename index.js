@@ -2,7 +2,7 @@
 // Найти элемент с идентификатором main и записать в него текст “Я главный элемент”.
 document.querySelector('#main').textContent = 'Я главный элемент'
 
-// 2.Написать скрипт, который находит картинки в блоке с классом main 
+// 2-3.Написать скрипт, который находит картинки в блоке с классом main 
 // и первым 5 картинкам меняет url на указанное значение.
 const picturesBlock = document.querySelector('.main-container')
 const newURL = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzqKD2gmnRY4sHjwHaDWBG05mfbHz53yvscQ&s'
@@ -12,3 +12,11 @@ if (picturesBlock) {
     pictures[i].src = newURL
   }
 }
+
+// 4. Написать скрипт, который находит все ссылки на странице 
+// и формирует массив со всеми адресами. 
+// В итоге этот массив необходимо вывести в консоль.
+
+const selectLinks = document.querySelectorAll('a')
+const arr = Array.from(selectLinks).map(link => link.href)
+console.log(arr)
