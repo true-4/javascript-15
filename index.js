@@ -73,3 +73,12 @@ for (let i = 100; i >= 50; i -= 10) {
 // для каждой строки создает параграф 
 // и добавляет его в div с классом strings_container. 
 // Строки взять произвольные.
+
+const animals = ['Dog', 'Cat', 'Wolf', 'Fox', 'Fish']
+const string = document.querySelector('.string-container')
+
+for (const el of animals) {
+  const p = document.createElement('p')
+  p.textContent = el
+  string.appendChild(p)
+}
