@@ -40,20 +40,36 @@ for (let i = 1; i < 21; i++) {
 // Статья https://nedmotorsport.com/stati/394-bmw-m3-e46-gtr-nedmotorsport
 
 
-const imageURL = prompt('Вставте ссылку на картинку: ')
-const articleURL = prompt('Вставте ссылку на статью: ')
+// const imageURL = prompt('Вставте ссылку на картинку: ')
+// const articleURL = prompt('Вставте ссылку на статью: ')
 
-if (imageURL && articleURL) {
-  const container = document.querySelector('#user-content')
+// if (imageURL && articleURL) {
+//   const container = document.querySelector('#user-content')
 
-  const img = document.createElement('img')
-  img.src = imageURL
-  img.style.maxHeight = '300px'
+//   const img = document.createElement('img')
+//   img.src = imageURL
+//   img.style.maxHeight = '300px'
 
-  const link = document.createElement('a')
-  link.href = articleURL
-  link.textContent = 'Прочитать статью'
+//   const link = document.createElement('a')
+//   link.href = articleURL
+//   link.textContent = 'Прочитать статью'
 
-  container.appendChild(img)
-  container.appendChild(link)
+//   container.appendChild(img)
+//   container.appendChild(link)
+// }
+
+// 7. Написать цикл, который создает множество параграфов с каждым десятым числом
+// в промежутке от 100 до 50 (т.е. 100, 90, 80, 70, 60, 50). 
+// Добавить созданные параграфы в div с классом numbers.
+
+const numbers = document.querySelector('.numbers')
+for (let i = 100; i >= 50; i -= 10) {
+  const p = document.createElement('p')
+  p.textContent = i
+  numbers.appendChild(p)
 }
+
+// 8. Написать цикл, который проходится по массиву строк, 
+// для каждой строки создает параграф 
+// и добавляет его в div с классом strings_container. 
+// Строки взять произвольные.
