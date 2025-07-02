@@ -82,3 +82,26 @@ for (const el of animals) {
   p.textContent = el
   string.appendChild(p)
 }
+
+// 9. Написать цикл, который проходится по массиву с объектами 
+// - у объектов свойства first_name, last_name и  age (данные взять произвольные) 
+// - и создает карточки только для совершеннолетних пользователей. 
+// Карточка должна содержать информацию об имени, фамилии и возрасте пользователя. 
+// Добавить все карточки в div с классом users_container.
+
+const arrayUsers = [
+  {first_name: 'Egor', last_name: 'Fill', age: 17,},
+  {first_name: 'Inga', last_name: 'Kim', age: 31,},
+  {first_name: 'Alex', last_name: 'Vlasov', age: 29,},
+]
+
+const userContainer = document.querySelector('.string-container')
+
+arrayUsers.forEach(user => {
+  if (user.age >= 18) {
+    const card = document.createElement('div')
+    card.className = 'user-card'
+    card.innerHTML = `<p>Имя: ${user.first_name}</p> <p>Фамилия: ${user.last_name}</p> <p>Возраст: ${user.age}</p>`
+    userContainer.appendChild(card)
+  }
+})
