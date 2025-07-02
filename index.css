@@ -1,0 +1,16 @@
+.main-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  place-items: center;
+  gap: 10px;
+}
+
+.item {
+  max-height: 100px;
+}
+
+.footer-box {
+  padding: 50px;
+  font-size: x-large;
+  text-align: center;
+}
