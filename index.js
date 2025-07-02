@@ -26,8 +26,34 @@ console.log(arr)
 // и для каждого создает параграф и добавляет в #root
 
 const root = document.querySelector('#root')
-for (let i = 0; i < 20; i++) {
+for (let i = 1; i < 21; i++) {
   const p = document.createElement('p')
   p.textContent = i
   root.appendChild(p)
+}
+
+// 6. Написать программу, которая запрашивает у пользователя картинку 
+// и ссылку на статью (любую) и формирует в интерфейсе картинку 
+// и внизу ссылку, указанную пользователем.
+// (для запроса используем браузерные технологии модальных окон)
+// Картинка https://nedmotorsport.com/images/stories/bmw%20e46%20m3%20gtr%201.jpg
+// Статья https://nedmotorsport.com/stati/394-bmw-m3-e46-gtr-nedmotorsport
+
+
+const imageURL = prompt('Вставте ссылку на картинку: ')
+const articleURL = prompt('Вставте ссылку на статью: ')
+
+if (imageURL && articleURL) {
+  const container = document.querySelector('#user-content')
+
+  const img = document.createElement('img')
+  img.src = imageURL
+  img.style.maxHeight = '300px'
+
+  const link = document.createElement('a')
+  link.href = articleURL
+  link.textContent = 'Прочитать статью'
+
+  container.appendChild(img)
+  container.appendChild(link)
 }
