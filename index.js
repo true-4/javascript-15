@@ -20,3 +20,14 @@ if (picturesBlock) {
 const selectLinks = document.querySelectorAll('a')
 const arr = Array.from(selectLinks).map(link => link.href)
 console.log(arr)
+
+// 5. Создать множество параграфов с числами от 0 до 19.
+// Написать цикл, который проходится по массиву строк 
+// и для каждого создает параграф и добавляет в #root
+
+const root = document.querySelector('#root')
+for (let i = 0; i < 20; i++) {
+  const p = document.createElement('p')
+  p.textContent = i
+  root.appendChild(p)
+}
